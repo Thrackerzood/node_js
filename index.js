@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000
+const cors = require('cors')
 
 
 
+//cors problem
+app.use(cors())
 
 
 app.listen(PORT, (err) => {
