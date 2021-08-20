@@ -27,7 +27,7 @@ router.post('/', async(req, res)=>{
    .then(async result => {
 
       await res.json({message: result})
-   })
+   }) 
    .catch(async error => {
 
       await res.json({message: 'ошибка сервера'})
