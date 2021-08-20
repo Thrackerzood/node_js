@@ -7,10 +7,9 @@ const corsOptions = {
     origin: 'https://sql-basedata.herokuapp.com/',
     optionsSuccessStatus: 200
 }
-
 // problems
-app.options('*', corsOptions)
-app.use(corsOptions)
+app.options('*', cors(corsOptions))
+app.use(cors(corsOptions))
 
 
 
