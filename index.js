@@ -2,6 +2,16 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000
 
+const cors = require('cors')
+const corsOptions = {
+    origin: 'https://sql-basedata.herokuapp.com/',
+    optionsSuccessStatus: 200
+}
+
+// problems
+app.options('*', corsOptions)
+app.use(corsOptions)
+
 
 
 app.listen(PORT, (err) => {
